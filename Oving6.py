@@ -38,3 +38,16 @@ df = df.set_index("time")
 # Velger en dato, 8.juni
 dag = df.loc["2023-07-8", "G(i)"]
 
+
+# Oppgave 6
+# tidsvariabel for dataene
+t_data = np.arange(len(dag))
+
+plt.plot(t, G, color = 'hotpink')
+plt.plot(t_data, dag, color="purple")
+plt.xlabel("Tid [timer]")
+plt.ylabel("Innstråling [W/m^2]")
+plt.legend(["Modell", "Data"])
+plt.grid(True)
+plt.savefig(r"C:\repos\ELK330-Oving6\Oppgave6.png")
+plt.show()
