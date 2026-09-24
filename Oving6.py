@@ -24,3 +24,17 @@ plt.grid(True)
 plt.savefig(r"C:\repos\ELK330-Oving6\Oppgave1.png")
 plt.show()
 
+
+# Oppgave 5
+# Leser inn filen, hopper over rad 1 til og med 8, skipper også de siste 10 radene
+df = pd.read_csv("pvgis.csv", skiprows = 8, skipfooter=10, engine="python")
+
+# Omgjør tiden til datetime, 
+df["time"] = pd.to_datetime(df["time"], format = "%Y%m%d:%H%M")
+
+# Setter tiden som indeks
+df = df.set_index("time")
+
+# Velger en dato, 8.juni
+dag = df.loc["2023-07-8", "G(i)"]
+
