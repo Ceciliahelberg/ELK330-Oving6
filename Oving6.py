@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 t = np.linspace(0, 24, 1000)
 
 # gauss variabler
-A = 800 # maks innstråling
-mu = 13 # tidpunkt for maks innstråling
-sigma = 3 # bredden av toppen
+A = 992 # maks innstråling
+mu = 12 # tidpunkt for maks innstråling
+sigma = 3.3 # bredden av toppen
 
 # Gauss modell:
 G = A * np.exp(-(t - mu)**2 / (2 * sigma**2))
@@ -51,3 +51,11 @@ plt.legend(["Modell", "Data"])
 plt.grid(True)
 plt.savefig(r"C:\repos\ELK330-Oving6\Oppgave6.png")
 plt.show()
+
+# Oppgave 7
+# finner maks solinnstråling og tidspunkt for maks solinnstråling
+max = dag.max()
+tid_max = dag.idxmax()
+print(max)
+print(tid_max)
+# max ca. lik 992 og tidspunkt er 12, endrer verdiene til modellen
