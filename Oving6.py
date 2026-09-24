@@ -23,3 +23,4 @@ plt.legend("G")
 plt.grid(True)
 plt.savefig(r"C:\repos\ELK330-Oving6\Oppgave1.png")
 plt.show()
+
